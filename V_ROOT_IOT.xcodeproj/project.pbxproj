@@ -14,6 +14,8 @@
 		3A4C1C482038202B0071D095 /* V_ROOT_IOT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C1C462038202B0071D095 /* V_ROOT_IOT.xcdatamodeld */; };
 		3A4C1C4A2038202B0071D095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C1C492038202B0071D095 /* Assets.xcassets */; };
 		3A4C1C4D2038202B0071D095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A4C1C4B2038202B0071D095 /* LaunchScreen.storyboard */; };
+		3A4E04792038A199000F8AA3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E04782038A199000F8AA3 /* Config.swift */; };
+		3A4E047B2038AC1A000F8AA3 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4E047A2038AC1A000F8AA3 /* Date+Extensions.swift */; };
 		49304E8420385BE7009338FC /* myTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49304E8320385BE7009338FC /* myTableViewController.swift */; };
 		49304E86203864D3009338FC /* myTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49304E85203864D3009338FC /* myTableViewCell.swift */; };
 		49304E882038890A009338FC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49304E872038890A009338FC /* APIService.swift */; };
@@ -30,6 +32,8 @@
 		3A4C1C492038202B0071D095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A4C1C4C2038202B0071D095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A4C1C4E2038202B0071D095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A4E04782038A199000F8AA3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Config.swift; path = ../../V_ROOT_IOT_SERVER/PerfectTemplate/Sources/Config.swift; sourceTree = "<group>"; };
+		3A4E047A2038AC1A000F8AA3 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "../../V_ROOT_IOT_SERVER/PerfectTemplate/Sources/Date+Extensions.swift"; sourceTree = "<group>"; };
 		49304E8320385BE7009338FC /* myTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableViewController.swift; sourceTree = "<group>"; };
 		49304E85203864D3009338FC /* myTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 		49304E872038890A009338FC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		3A4C1C3E2038202B0071D095 /* V_ROOT_IOT */ = {
 			isa = PBXGroup;
 			children = (
+				3A4E04782038A199000F8AA3 /* Config.swift */,
 				3A4C1C3F2038202B0071D095 /* AppDelegate.swift */,
 				3A4C1C412038202B0071D095 /* ViewController.swift */,
 				49304E8920388CC4009338FC /* Entities.swift */,
@@ -82,6 +87,7 @@
 				3A4C1C4B2038202B0071D095 /* LaunchScreen.storyboard */,
 				3A4C1C4E2038202B0071D095 /* Info.plist */,
 				3A4C1C462038202B0071D095 /* V_ROOT_IOT.xcdatamodeld */,
+				3A4E047A2038AC1A000F8AA3 /* Date+Extensions.swift */,
 			);
 			path = V_ROOT_IOT;
 			sourceTree = "<group>";
@@ -236,9 +242,11 @@
 			files = (
 				49304E882038890A009338FC /* APIService.swift in Sources */,
 				3A4C1C422038202B0071D095 /* ViewController.swift in Sources */,
+				3A4E047B2038AC1A000F8AA3 /* Date+Extensions.swift in Sources */,
 				49304E86203864D3009338FC /* myTableViewCell.swift in Sources */,
 				3A4C1C402038202B0071D095 /* AppDelegate.swift in Sources */,
 				49304E8A20388CC4009338FC /* Entities.swift in Sources */,
+				3A4E04792038A199000F8AA3 /* Config.swift in Sources */,
 				3A4C1C482038202B0071D095 /* V_ROOT_IOT.xcdatamodeld in Sources */,
 				49304E8420385BE7009338FC /* myTableViewController.swift in Sources */,
 			);

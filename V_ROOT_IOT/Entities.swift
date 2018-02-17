@@ -6,19 +6,26 @@
 //  Copyright © 2018 Alex Vihlayew. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-struct VisitsResponse: Codable {
-    let visits: [Visit]
-    
+struct VisitsResponseApiStruct: Codable {
+    let visits: [VisitPreviewApiStruct]
 }
 
-struct Visit: Codable {
+struct VisitPreviewApiStruct: Codable {
     let previewPhotoUID: String
     let uid: String
-    let time: UInt64
-    
-    
-    
+    let timestamp: UInt64
 }
 
+struct VisitApiStruct: Codable {
+    let uid: String
+    let timestamp: UInt64
+    let photoUIDs: [String]
+}
+
+struct Visit {
+    let uid: String
+    let date: Date
+    let photos: [UIImage]
+}

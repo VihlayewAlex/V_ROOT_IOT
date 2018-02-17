@@ -11,16 +11,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!
-    var secImage = ""
-    var secLabel = ""
+    
+    var visit: Visit?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        secondImage?.image = UIImage(named:secImage)
-        secondLabel?.text = secLabel
+        
+        secondImage?.image = visit?.photos.first
+        secondLabel?.text = visit?.date.stringRepresentation()
     }
 
     override func didReceiveMemoryWarning() {
