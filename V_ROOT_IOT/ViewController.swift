@@ -8,11 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    
+
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var secondLabel: UILabel!
+    var secImage = ""
+    var secLabel = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        secondImage?.image = UIImage(named:secImage)
+        secondLabel?.text = secLabel
     }
 
     override func didReceiveMemoryWarning() {
