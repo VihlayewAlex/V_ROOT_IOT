@@ -1,0 +1,6 @@
+framework module Pods_V_ROOT_IOT {
+  umbrella header "Pods-V_ROOT_IOT-umbrella.h"
+
+  export *
+  module * { export * }
+}
