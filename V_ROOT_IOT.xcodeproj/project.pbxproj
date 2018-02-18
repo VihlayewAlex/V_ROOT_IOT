@@ -34,6 +34,7 @@
 		3A4C1C4E2038202B0071D095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A4E04782038A199000F8AA3 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Config.swift; path = ../../V_ROOT_IOT_SERVER/PerfectTemplate/Sources/Config.swift; sourceTree = "<group>"; };
 		3A4E047A2038AC1A000F8AA3 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+Extensions.swift"; path = "../../V_ROOT_IOT_SERVER/PerfectTemplate/Sources/Date+Extensions.swift"; sourceTree = "<group>"; };
+		3A4E04A32038EFAC000F8AA3 /* V_ROOT_IOT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = V_ROOT_IOT.entitlements; sourceTree = "<group>"; };
 		49304E8320385BE7009338FC /* myTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableViewController.swift; sourceTree = "<group>"; };
 		49304E85203864D3009338FC /* myTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTableViewCell.swift; sourceTree = "<group>"; };
 		49304E872038890A009338FC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		3A4C1C3E2038202B0071D095 /* V_ROOT_IOT */ = {
 			isa = PBXGroup;
 			children = (
+				3A4E04A32038EFAC000F8AA3 /* V_ROOT_IOT.entitlements */,
 				3A4E04782038A199000F8AA3 /* Config.swift */,
 				3A4C1C3F2038202B0071D095 /* AppDelegate.swift */,
 				3A4C1C412038202B0071D095 /* ViewController.swift */,
@@ -145,6 +147,11 @@
 					3A4C1C3B2038202B0071D095 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -322,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -373,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -386,11 +393,13 @@
 			baseConfigurationReference = 10788EB31637DA08162ECB5D /* Pods-V_ROOT_IOT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = V_ROOT_IOT/V_ROOT_IOT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22U234HGU8;
+				DEVELOPMENT_TEAM = ZJ2X3L2QM5;
 				INFOPLIST_FILE = V_ROOT_IOT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vihlayew.V-ROOT-IOT";
+				PRODUCT_BUNDLE_IDENTIFIER = "vihlayew.V-ROOT-IOT-SB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -402,11 +411,13 @@
 			baseConfigurationReference = 4ED241BADD204CA3FE2F9E2E /* Pods-V_ROOT_IOT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = V_ROOT_IOT/V_ROOT_IOT.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 22U234HGU8;
+				DEVELOPMENT_TEAM = ZJ2X3L2QM5;
 				INFOPLIST_FILE = V_ROOT_IOT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vihlayew.V-ROOT-IOT";
+				PRODUCT_BUNDLE_IDENTIFIER = "vihlayew.V-ROOT-IOT-SB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
