@@ -9,5 +9,7 @@ target 'V_ROOT_IOT' do
   pod "PromiseKit"
   pod "Alamofire"
   pod "PromiseKit/Alamofire"
+  pod 'moa', '~> 9.0'
+  pod 'Auk', '~> 8.0'
 
 end

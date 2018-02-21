@@ -62,7 +62,7 @@ class APIService {
                         self.loadImagesFrom(urls: visitJson.photoUIDs.map({ (str) in
                             return URL(string: Config.baseApiUrl + "/downloadPhoto?uid=" + str)!
                         })).then(execute: { (images) -> Void in
-                            let visit = Visit(uid: visitJson.uid, date: Date(timeIntervalSince1970: TimeInterval(visitJson.timestamp)), photos: images)
+                            let visit = Visit(uid: visitJson.uid, number: visitJson.number, date: Date(timeIntervalSince1970: TimeInterval(visitJson.timestamp)), photos: images)
                             fulfill(visit)
                         }).catch(execute: { (error) in
                             reject(error)

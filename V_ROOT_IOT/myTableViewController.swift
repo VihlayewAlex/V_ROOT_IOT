@@ -27,29 +27,33 @@ class myTableViewController: UITableViewController {
                 self?.visits = visits
                 self?.tableView.reloadData()
             })
+        
+        Timer.scheduledTimer(withTimeInterval: TimeInterval(5), repeats: true, block: { [weak self] (timer) in
+            APIService.shared
+                .getVisits()
+                .then(execute: { [weak self] (visits) -> Void in
+                    self?.visits = visits
+                    self?.tableView.reloadData()
+                })
+        })
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let navigationBar = self.navigationController?.navigationBar
         
-        navigationBar?.barStyle = UIBarStyle.black
+        navigationBar?.barStyle = UIBarStyle.blackTranslucent
         navigationBar?.tintColor = UIColor.white
+        //navigationBar?.barTintColor = UIColor.purple
         
-        // let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        // imageView.contentMode = .scaleAspectFit
+       /* let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+         imageView.contentMode = .scaleAspectFit
         
-        // let image = UIImage(named: "icon")
-        // imageView.image = image
+         let image = UIImage(named: "Applcon")
+         imageView.image = image
         
-        // navigationItem.titleView = imageView
+         navigationItem.titleView = imageView*/
     }
-
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let ratationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
-        cell.layer.transform = ratationTransform
-        UIView.animate(withDuration: 1.0, animations: {cell.layer.transform = CATransform3DIdentity})
-    }
-
+    
     
     // MARK: - Table view data source
 
@@ -60,12 +64,12 @@ class myTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return visits.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! myTableViewCell
         cell.cellImage?.image = visits[indexPath.row].photos.first
         cell.cellLabel?.text = visits[indexPath.row].date.stringRepresentation()
+        cell.titleLabel.text = "New visit #\(visits[indexPath.row].number)"
         
         cell.cellImage?.layer.cornerRadius = 30.0
         cell.cellImage?.clipsToBounds = true
